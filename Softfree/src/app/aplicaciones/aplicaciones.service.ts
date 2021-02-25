@@ -32,8 +32,16 @@ export class AplicacionesService {
     console.log(this.http.get(this.url + 'catalogosApp/aplicacion', {headers}));
     return this.http.get(this.url + 'catalogosApp/aplicacion', {headers});
   }
-  getAplication(id):Observable<Aplicacion> {
+  /*getAplication(id):Observable<Aplicacion> {
     let catalogosApp = this.url + "/catalogosApp/aplicacion/" + id
     return this.http.get<Aplicacion>(catalogosApp);
+  }*/
+
+  getAplicacion(aplicacionId: string) {
+    return{
+      ...this.aplicacion.find(aplication => {
+        return aplication.id === aplicacionId
+      })
+    }
   }
 }

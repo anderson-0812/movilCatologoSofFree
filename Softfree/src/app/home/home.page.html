@@ -7,7 +7,8 @@
 <ion-content>
 
 <ion-list>
-    <ion-item *ngFor="let item of aplications;">
+
+    <ion-item *ngFor="let item of aplications;" [routerLink]="['/aplicaciones']">
     <ion-label>
       {{item.nombre}}
     </ion-label>

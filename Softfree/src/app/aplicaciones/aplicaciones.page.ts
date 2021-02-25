@@ -14,12 +14,13 @@ export class AplicacionesPage implements OnInit {
   constructor(private activerouter:ActivatedRoute,private router: Router, private aplicacionesService: AplicacionesService) { }
 
   ngOnInit() {
-    let aplicationid = this.activerouter.snapshot.paramMap.get('id');
+  
     this.aplications = this.getAplications();
   }
 
   // Recarga la vista con datos actualizados sirve para que los datos que se eliminan o cambien se reflejen
   ionViewWillEnter(){
+    let aplicationid = this.activerouter.snapshot.paramMap.get('id')
     this.aplications = this.getAplications();
 
   }

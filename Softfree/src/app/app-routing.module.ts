@@ -16,7 +16,11 @@ const routes: Routes = [
     loadChildren: () => import('./licencias/licencias.module').then( m => m.LicenciasPageModule)
   },
   {
-    path: 'home/aplicaciones',
+    path: 'aplicaciones',
+    loadChildren: () => import('./aplicaciones/aplicaciones.module').then( m => m.AplicacionesPageModule)
+  },
+  {
+    path: ':aplicacionId',
     loadChildren: () => import('./aplicaciones/aplicaciones.module').then( m => m.AplicacionesPageModule)
   },
 ];
