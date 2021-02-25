@@ -1,9 +1,58 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-title>licencias</ion-title>
+  <ion-toolbar color="secondary">
+    <!-- slot="start" sirv para alinear antes del nombre el btn  -->
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref = "/home">
+
+      </ion-back-button>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
+  <ion-grid class="ion-no-padding">
+    <ion-row>
+      <ion-col>
+        <h1 class="ion-text-center">Detalle de las licencias</h1>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-list>
+          <ion-item *ngFor = " let item of licencias;">
+            {{ item.nombre }}
+          </ion-item>
+        </ion-list>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-list>
+          <ion-item *ngFor = " let item of licencias;">
+            {{ item.tipoLicencia }}
+          </ion-item>
+        </ion-list>
+      </ion-col>
+    </ion-row>
 
+    <ion-row>
+      <ion-col>
+        <ion-list>
+          <ion-item *ngFor = " let item of licencias;">
+            {{ item.costoLicencia }}
+          </ion-item>
+        </ion-list>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col>
+        <ion-list>
+          <ion-item *ngFor = " let item of licencias;">
+            {{ item.aplicaciones }}
+          </ion-item>
+        </ion-list>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
 </ion-content>
